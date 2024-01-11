@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="weather/index.css">
-</head>
-<body>
-    <div class="container">
-        <section class="main">
-            <section class="'inputs">
-                <input type="text" placeholder="enter your city name:" id="cityinput">
-                <input type="submit" value="submit" id="add">
-                <button placeholder="submit" id="add"></button>
-            </section>
-
-            
-            <section class="display">
-                <div class="wrapper">
-                    <h2 id="cityoutput"></h2>
-                    <p id="description"></p>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Home | Netflix</title>
+        <link rel="stylesheet" href="home_page.css"/>
+        <script src="script2.js"></script>
+    </head>
+    <body>
+        <!--navbar-->
+        <div class="nav">
+            <div class="nav_left">
+                <a href="index.html">
+                    <img class="nav_logo" src="./icon.png" alt="">
+                </a>
+            </div>
+            <div class="nav__right"> 
+            <img class="nav_logo" src="./avatar.png" class="nav_avatar" alt="">
+            </dkiv>
+        </div>
+        <!--banner-->
+        <header id="bannner">
+            <div id="banner__contents">
+                <h1 id="banner__title"></h1>
+                <div id="banner__buttons">
+                    <button id="banner__button">Play</button>
+                    <button id="banner__button">My List</button>
                 </div>
-            </section>
-        </section>
-    </div>
-    
-    <script src="=weather/index.js"></script>
-    
-</body>
+                <p id="banner__buttons"></p>
+                </div>
+                <div id="banner__fadeBottom"></div>
+        </header>
+        <!--row-->
+        <div id="headrow">
+            <div class="row">
+                <h2 class="row__title"></h2>
+                <div class="row__posters"></div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("scroll",function(){
+              var nav = document.querySelector(".nav");
+              nav.classList.toggle("active",window.scrollY > 0);  
+            })
+        </script>
+    </body>
 </html>
